@@ -1,0 +1,17 @@
+	
+	Zero: configuracao inicial, chamando template (topo, menu, conteudo e rodape) a partir da funcao layout() em MY_Controller;
+		Arquivos: Systofi.php, MY_Controller
+
+	Um: chamando template com o HTML incorporado do tema principal;
+		Arquivos: topo, conteudo, menu e rodape
+		Erro: foi duplicado os arquivos de JS em conteudo e rodape, logo menu hamburguer, perfil e chev-ron do menu nao funciona
+
+	Dois: mudanca de names, tema->template, topo->header, conteudo->content, rodape->footer;
+
+	Tres: aspectos visuais nos card de dashbord, cores e exclusao de dos cards despesas e receitas;
+
+	Quatro: limpeza dos arquivos baixado por composer e comentarios no arquivo composer.json
+
+	Cinco: carregamento da biblioteca 'database' e do helper 'url' no autoload.php e criacao do bd 'systofi_lite' e configuracao em database.php
+		
+
