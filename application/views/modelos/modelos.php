@@ -36,8 +36,6 @@
                                     echo '<td>' . $r->marca_id . '</td>';
                                     echo '<td>' . $r->descricao . '</td>';
                                     echo '<td class="text-center">';
-                                        echo '<a href="' . base_url() . 'index.php/servicos/visualizar/' . $r->idModelo . '" style="margin-right: 2%" class="btn btn-xs btn-icon btn-success btn-outline" data-toggle="tooltip" data-original-title="Ver mais detalhes"><i class="ti-eye"></i></a>';
-
                                         echo '<a href="' . base_url() . 'index.php/servicos/editar/' . $r->idModelo . '" style="margin-right: 2%" class="btn btn-xs btn-icon btn-info btn-outline" data-toggle="tooltip" data-original-title="Editar"><i class="ti-pencil-alt"></i></a>';
 
                                         echo '<a href="" class="btn btn-xs btn-icon btn-danger btn-outline" data-toggle="tooltip" data-original-title="Excluir"><i class="ti-trash"></i></a>';

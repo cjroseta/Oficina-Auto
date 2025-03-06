@@ -50,10 +50,10 @@ class Permissoes extends MY_Controller
 
             $permissoes = [
 
-                'aCliente' => $this->input->post('aCliente'),
-                'eCliente' => $this->input->post('eCliente'),
-                'dCliente' => $this->input->post('dCliente'),
-                'vCliente' => $this->input->post('vCliente'),
+                'aContact' => $this->input->post('aContact'),
+                'eContact' => $this->input->post('eContact'),
+                'dContact' => $this->input->post('dContact'),
+                'vContact' => $this->input->post('vContact'),
 
                 'aProduto' => $this->input->post('aProduto'),
                 'eProduto' => $this->input->post('eProduto'),
@@ -130,7 +130,7 @@ class Permissoes extends MY_Controller
                 'eRelatorio' => $this->input->post('eRelatorio'),
                 'cConfiguracoes' => $this->input->post('cConfiguracoes'),
 
-                'rCliente' => $this->input->post('rCliente'),
+                'rContact' => $this->input->post('rContact'),
                 'rProduto' => $this->input->post('rProduto'),
                 'rServico' => $this->input->post('rServico'),
                 'rJc' => $this->input->post('rJc'),
@@ -184,10 +184,10 @@ class Permissoes extends MY_Controller
             $situacao = $this->input->post('situacao');
             $permissoes = [
 
-                'aCliente' => $this->input->post('aCliente'),
-                'eCliente' => $this->input->post('eCliente'),
-                'dCliente' => $this->input->post('dCliente'),
-                'vCliente' => $this->input->post('vCliente'),
+                'aContact' => $this->input->post('aContact'),
+                'eContact' => $this->input->post('eContact'),
+                'dContact' => $this->input->post('dContact'),
+                'vContact' => $this->input->post('vContact'),
 
                 'aProduto' => $this->input->post('aProduto'),
                 'eProduto' => $this->input->post('eProduto'),
@@ -264,7 +264,7 @@ class Permissoes extends MY_Controller
                 'eRelatorio' => $this->input->post('eRelatorio'),
                 'cConfiguracoes' => $this->input->post('cConfiguracoes'),
 
-                'rCliente' => $this->input->post('rCliente'),
+                'rContact' => $this->input->post('rContact'),
                 'rProduto' => $this->input->post('rProduto'),
                 'rServico' => $this->input->post('rServico'),
                 'rJc' => $this->input->post('rJc'),
@@ -308,158 +308,3 @@ class Permissoes extends MY_Controller
     }
 
 }
-
-/*
-a:53:{
-    s:8:"aCliente";N;
-    s:8:"eCliente";N;
-    s:8:"dCliente";N;
-    s:8:"vCliente";s:1:"1";
-
-    s:8:"aProduto";N;
-    s:8:"eProduto";N;
-    s:8:"dProduto";N;
-    s:8:"vProduto";s:1:"1";
-
-    s:8:"aServico";N;
-    s:8:"eServico";N;
-    s:8:"dServico";N;
-    s:8:"vServico";s:1:"1";
-
-    s:3:"aOs";N;
-    s:3:"eOs";N;
-    s:3:"dOs";N;
-    s:3:"vOs";N;
-
-    s:6:"aVenda";N;
-    s:6:"eVenda";N;
-    s:6:"dVenda";N;
-    s:6:"vVenda";N;
-
-    s:9:"aGarantia";N;
-    s:9:"eGarantia";N;
-    s:9:"dGarantia";N;
-    s:9:"vGarantia";N;
-    
-    s:8:"aArquivo";N;
-    s:8:"eArquivo";N;
-    s:8:"dArquivo";N;
-    s:8:"vArquivo";N;
-    
-    s:10:"aPagamento";N;
-    s:10:"ePagamento";N;
-    s:10:"dPagamento";N;
-    s:10:"vPagamento";N;
-    
-    s:11:"aLancamento";N;
-    s:11:"eLancamento";N;
-    s:11:"dLancamento";N;
-    s:11:"vLancamento";N;
-
-    s:8:"cUsuario";
-    N;
-    s:9:"cEmitente";
-    N;
-    s:10:"cPermissao";
-    N;
-    s:7:"cBackup";
-    N;
-    s:10:"cAuditoria";
-    N;
-    s:6:"cEmail";
-    N;
-    s:8:"cSistema";
-    N;
-
-    s:8:"rCliente";
-    N;
-    s:8:"rProduto";
-    N;
-    s:8:"rServico";
-    N;
-    s:3:"rOs";
-    N;
-    s:6:"rVenda";
-    N;
-    s:11:"rFinanceiro";
-    N;
-    
-    s:9:"aCobranca";
-    N;
-    s:9:"eCobranca";
-    N;
-    s:9:"dCobranca";
-    N;
-    s:9:"vCobranca";
-    N;
-}
-*/
-
-/*
-a:53:{
-    s:8:"aCliente";s:1:"1";
-    s:8:"eCliente";s:1:"1";
-    s:8:"dCliente";s:1:"1";
-    s:8:"vCliente";s:1:"1";
-    
-    s:8:"aProduto";s:1:"1";
-    s:8:"eProduto";s:1:"1";
-    s:8:"dProduto";s:1:"1";
-    s:8:"vProduto";s:1:"1";
-
-    s:8:"aServico";s:1:"1";
-    s:8:"eServico";s:1:"1";
-    s:8:"dServico";s:1:"1";
-    s:8:"vServico";s:1:"1";
-
-    s:3:"aOs";s:1:"1";
-    s:3:"eOs";s:1:"1";
-    s:3:"dOs";s:1:"1";
-    s:3:"vOs";s:1:"1";
-    
-    s:6:"aVenda";s:1:"1";
-    s:6:"eVenda";s:1:"1";
-    s:6:"dVenda";s:1:"1";
-    s:6:"vVenda";s:1:"1";
-    
-    s:9:"aGarantia";s:1:"1";
-    s:9:"eGarantia";s:1:"1";
-    s:9:"dGarantia";s:1:"1";
-    s:9:"vGarantia";s:1:"1";
-    
-    s:8:"aArquivo";s:1:"1";
-    s:8:"eArquivo";s:1:"1";
-    s:8:"dArquivo";s:1:"1";
-    s:8:"vArquivo";s:1:"1";
-    
-    s:10:"aPagamento";N;
-    s:10:"ePagamento";N;
-    s:10:"dPagamento";N;
-    s:10:"vPagamento";N;
-    
-    s:11:"aLancamento";s:1:"1";
-    s:11:"eLancamento";s:1:"1";
-    s:11:"dLancamento";s:1:"1";
-    s:11:"vLancamento";s:1:"1";
-    
-    s:8:"cUsuario";s:1:"1";
-    s:9:"cEmitente";s:1:"1";
-    s:10:"cPermissao";s:1:"1";
-    s:7:"cBackup";s:1:"1";
-    s:10:"cAuditoria";s:1:"1";
-    s:6:"cEmail";s:1:"1";
-    s:8:"cSistema";s:1:"1";
-
-    s:8:"rCliente";s:1:"1";
-    s:8:"rProduto";s:1:"1";
-    s:8:"rServico";s:1:"1";
-    s:3:"rOs";s:1:"1";
-    s:6:"rVenda";s:1:"1";
-    s:11:"rFinanceiro";s:1:"1";
-    
-    s:9:"aCobranca";s:1:"1";
-    s:9:"eCobranca";s:1:"1";
-    s:9:"dCobranca";s:1:"1";
-    s:9:"vCobranca";s:1:"1";
-}
-*/

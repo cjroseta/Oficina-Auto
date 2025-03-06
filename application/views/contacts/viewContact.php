@@ -3,7 +3,7 @@
         <div class="col-lg-12 col-xlg-9 col-md-7">
             <div class="card bg-light">
                 <ul class="nav nav-tabs customtab" id="pills-tab" role="tablist">
-                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#dadosCliente" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down"> Dados do Cliente</span></a> </li>
+                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#dadosContact" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down"> Dados do Contacto</span></a> </li>
 
                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#ordensServico" role="tab"><span class="hidden-sm-up"><i class="ti-bookmark-alt"></i></span> <span class="hidden-xs-down"> Ordens de Serviços</span></a> </li>
 
@@ -15,21 +15,21 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
 
-                    <!-- Tab Dados do Cliente -->
-                    <div class="tab-pane fade show active p-30" id="dadosCliente" role="tabpanel">
+                    <!-- Tab Dados do Contact -->
+                    <div class="tab-pane fade show active p-30" id="dadosContact" role="tabpanel">
                         <div class="card-body">
                             <table class="table table-hover table-bordered table-sm">
                                 <tbody>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>ID</strong></td>
                                         <td>
-                                        <?php echo $result->idClientes ?>
+                                        <?php echo $result->idContacts ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Nome/Razão Social</strong></td>
                                         <td>
-                                        <?php echo $result->nomeCliente ?>
+                                        <?php echo $result->nameContact ?>
                                         </td>
                                     </tr>
                                     <tr>
@@ -41,21 +41,21 @@
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Contacto</strong></td>
                                         <td>
-                                        <?php echo $result->contato ?>
+                                        <?php echo $result->contact ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Categoria</strong></td>
                                         <td>
-                                        <?php echo $result->categoria ?>
+                                        <?php echo $result->category ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Tipo Contacto</strong></td>
                                         <td>
                                             <?php 
-                                                $tipo = $result->tipo_cliente;
-                                                if ($tipo == 1) {
+                                                $type = $result->type_contact;
+                                                if ($type == 1) {
                                                     echo "Fornecedor";
                                                 } else {
                                                     echo "Cliente";
@@ -90,13 +90,13 @@
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Cidade</strong></td>
                                         <td>
-                                        <?php echo $result->cidade ?>
+                                        <?php echo $result->city ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Endereço</strong></td>
                                         <td>
-                                        <?php echo $result->endereco ?>
+                                        <?php echo $result->address ?>
                                         </td>
                                     </tr>
                                     <tr>
@@ -118,7 +118,7 @@
                             </table>
                         </div>
                     </div>
-                    <!-- End Tab Dados do Cliente -->
+                    <!-- End Tab Dados do Contact -->
 
                     <!-- Tab Ordens de Serviços -->
                     <div class="tab-pane fade show" id="ordensServico" role="tabpanel">
@@ -147,13 +147,13 @@
                 </div>
 
                 <div class="card-footer text-center p-4">
-                    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eCliente')) {
-                        echo '<a href="'. base_url() .'index.php/clientes/editar/'. $result->idClientes .'" class="btn btn-info p-0-0">
+                    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eContact')) {
+                        echo '<a href="'. base_url() .'index.php/contacts/editContact/'. $result->idContacts .'" class="btn btn-info p-0-0">
                         <span class="button__icon"><i class="mdi mdi-pencil-box-outline"></i></span><span class="button__text2 p-r-30">Editar</span>
                         </a>';                        
                     } ?>
 
-                        <a href="<?php echo base_url(); ?>index.php/clientes" class="btn btn-warning p-0-0">
+                        <a href="<?php echo base_url(); ?>index.php/Contacts" class="btn btn-warning p-0-0">
                         <span class="button__icon"><i class="mdi mdi-undo-variant"></i></span><span class="button__text2 p-r-30">Voltar</span>
                     </a>
                 </div>

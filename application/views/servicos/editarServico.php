@@ -60,8 +60,6 @@
                         <div class="form-actions">
                             <div class="text-center p-25">
                                 <button type="submit" class="btn btn-success waves-effect waves-light p-0-0"><span class="button__icon"><i class="mdi mdi-content-save-all"></i></span><span class="button__text2 p-r-30">Salvar</span></button>
-                                
-                                <button type="reset" class="btn btn-warning waves-effect waves-light p-0-0"><span class="button__icon"><i class="mdi mdi-broom"></i></span><span class="button__text2 p-r-25">Limpar</span></button>
 
                                 <a class="btn btn-danger waves-effect waves-light p-0-0" href="<?php echo site_url() ?>/servicos"><span class="button__icon"><i class="mdi mdi-reply-all"></i></span><span class="button__text2 p-r-20">Cancelar</span></a>
                             </div>

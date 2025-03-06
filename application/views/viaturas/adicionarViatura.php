@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.js"></script>
+
 <script src="<?php echo base_url() ?>assets/js/jquery.mask.min.js"></script>
 <script src="<?php echo base_url() ?>assets/js/funcoes.js"></script>
 
@@ -101,9 +105,10 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="proprietario" class="control-label text-right col-md-3">Nome do Proprietário</label>
+                                        <label for="cliente" class="control-label text-right col-md-3">Cliente</label>
                                         <div class="col-md-9">
-                                            <input id="proprietario" type="text" name="proprietario" value="<?php echo set_value('proprietario'); ?>" class="form-control" />
+                                            <input id="cliente" type="text" name="cliente" value="<?php echo set_value('cliente'); ?>" class="form-control" />                                            
+                                            <input id="clientes_id" class="span12" type="hidden" name="clientes_id" value="<?php echo set_value('clientes_id'); ?>" />
                                         </div>
                                     </div>
                                 </div>
@@ -153,13 +158,26 @@
         </div>
     </div>
 </div>
-
 <!-- End Container fluid  -->
 
 <script type="text/javascript">
     $(document).ready(function() {
+        $("#cliente").autocomplete({
+            source: "<?php echo base_url(); ?>index.php/viaturas/autoCompleteCliente",
+            minLength: 1,
+            select: function(event, ui) {
+                $("#clientes_id").val(ui.item.id);
+            }
+        });
+        $("#tecnico").autocomplete({
+            source: "<?php echo base_url(); ?>index.php/viaturas/autoCompleteUsuario",
+            minLength: 1,
+            select: function(event, ui) {
+                $("#usuarios_id").val(ui.item.id);
+            }
+        });
 
-        $("#nomeCliente").focus();
+        $("#cliente").focus();
         $('#formCliente').validate({
             rules: {
                 nuit: { required: true },

@@ -12,15 +12,15 @@
                 <?php if ($custom_error != '') {
                     echo '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>' . $custom_error . '</div>';
                 } ?>
-                <form action="<?php echo current_url(); ?>" id="formCliente" method="post" class="form-horizontal p-t-5">
+                <form action="<?php echo current_url(); ?>" id="formContact" method="post" class="form-horizontal p-t-5">
                     <div class="form-body">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="nomeCliente" class="control-label text-right col-md-3">Nome/Razão Social<span class="required text-danger"> *</span></label>
+                                        <label for="nameContact" class="control-label text-right col-md-3">Nome/Razão Social<span class="required text-danger"> *</span></label>
                                         <div class="col-md-9">
-                                            <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo set_value('nomeCliente'); ?>" class="form-control form-control-danger" />
+                                            <input id="nameContact" type="text" name="nameContact" value="<?php echo set_value('nameContact'); ?>" class="form-control form-control-danger" />
                                         </div>
                                     </div>
                                 </div>
@@ -38,9 +38,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="contato" class="control-label text-right col-md-3">Contacto</label>
+                                        <label for="contact" class="control-label text-right col-md-3">Contacto</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="contato" class="form-control" name="contato" value="<?php echo set_value('contato'); ?>" />
+                                            <input type="text" id="contact" class="form-control" name="contact" value="<?php echo set_value('contato'); ?>" />
                                         </div>
                                     </div>
                                 </div>
@@ -90,9 +90,9 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="cidade" class="control-label text-right col-md-3">Cidade</label>
+                                        <label for="city" class="control-label text-right col-md-3">Cidade</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="cidade" name="cidade" value="<?php echo set_value('cidade'); ?>" class="form-control form-control-danger" />
+                                            <input type="text" id="city" name="city" value="<?php echo set_value('city'); ?>" class="form-control form-control-danger" />
                                         </div>
                                     </div>
                                 </div>
@@ -103,18 +103,18 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="endereco" class="control-label text-right col-md-3">Endereço</label>
+                                        <label for="adrress" class="control-label text-right col-md-3">Endereço</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="endereco" class="form-control" name="endereco" value="<?php echo set_value('endereco'); ?>" />
+                                            <input type="text" id="adrress" class="form-control" name="adrress" value="<?php echo set_value('adrress'); ?>" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="categoria" class="control-label text-right col-md-3">Categória<span class="required text-danger"> *</span></label>
+                                        <label for="category" class="control-label text-right col-md-3">Categória<span class="required text-danger"> *</span></label>
                                         <div class="col-md-9">
-                                            <select class="custom-select mr-sm-2" name="categoria" id="categoria">
+                                            <select class="custom-select mr-sm-2" name="category" id="category">
                                                 <option value=""></option>
                                                 <option value="Empresa Pública">Empresa Pública</option>
                                                 <option value="Empresa Privada">Empresa Privada</option>
@@ -131,10 +131,10 @@
                                 <div class="col-md-6"></div>
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">Tipo de Cliente</label>
+                                        <label class="control-label text-right col-md-3">Tipo de Contacto</label>
                                         <div class="col-lg-9">
-                                            <label for="tipo_cliente" class="text-left col-md-3 btn btn-secondary">Fornecedor
-                                                <input type="checkbox" id="tipo_cliente" name="tipo_cliente" value="1" class="m-l-15">
+                                            <label for="type_contact" class="text-left col-md-3 btn btn-secondary">Fornecedor
+                                                <input type="checkbox" id="type_contact" name="type_contact" value="1" class="m-l-15">
                                             </label>
                                         </div>
                                     </div>
@@ -163,7 +163,7 @@
 
                                 <button type="reset" class="btn btn-warning waves-effect waves-light p-0-0"><span class="button__icon"><i class="mdi mdi-broom"></i></span><span class="button__text2 p-r-25">Limpar</span></button>
 
-                                <a class="btn btn-danger waves-effect waves-light p-0-0" href="<?php echo site_url() ?>/clientes"><span class="button__icon"><i class="mdi mdi-reply-all"></i></span><span class="button__text2 p-r-20">Cancelar</span></a>
+                                <a class="btn btn-danger waves-effect waves-light p-0-0" href="<?php echo site_url() ?>/contacts"><span class="button__icon"><i class="mdi mdi-reply-all"></i></span><span class="button__text2 p-r-20">Cancelar</span></a>
                             </div>
                         </div>
                         <!-- End Form Action -->
@@ -180,17 +180,17 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        $("#nomeCliente").focus();
-        $('#formCliente').validate({
+        $("#nameContact").focus();
+        $('#formContact').validate({
             rules: {
                 nuit: { required: true },
-                nomeCliente: { required: true },
-                categoria: { required: true},
+                nameContact: { required: true },
+                category: { required: true},
             },
             messages: {
                 nuit: { required: 'Campo Obrigatório.' },
-                nomeCliente: { required: 'Campo Obrigatório.' },
-                categoria: { required: 'Campo Obrigatório.' },
+                nameContact: { required: 'Campo Obrigatório.' },
+                category: { required: 'Campo Obrigatório.' },
             },
 
             errorClass: "help-inline",

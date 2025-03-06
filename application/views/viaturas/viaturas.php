@@ -34,7 +34,7 @@
                                 <th scope="col"><b>Marca</b></th>
                                 <th scope="col"><b>Modelo</b></th>
                                 <th scope="col"><b>Vin Number</b></th>
-                                <th scope="col" width="380"><b>Proprietario</b></th>
+                                <th scope="col" width="380"><b>Cliente</b></th>
                                 <th scope="col" width="120" class="text-center"></th> 
                             </tr>
                         </thead>
@@ -51,7 +51,7 @@
                                     echo '<td>' . $r->marca . '</td>';
                                     echo '<td>' . $r->modelo . '</td>';
                                     echo '<td>' . $r->num_chassis . '</td>';
-                                    echo '<td>' . $r->clientes_id . '</td>';
+                                    echo '<td>' . $r->nomeCliente . '</td>';
                                     echo '<td class="text-center">';
                                     
                                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vViatura')) {

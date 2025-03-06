@@ -54,35 +54,35 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-12 mb-1 bord-permis">
-                                    <a href="#clientes" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
-                                        <h4 class="p-1"><i class="fas fa-street-view text-cyan" data-toggle="tooltip"></i> Clientes</h4>
+                                    <a href="#contacts" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
+                                        <h4 class="p-1"><i class="fas fa-street-view text-cyan" data-toggle="tooltip"></i> Contactos</h4>
                                     </a>
-                                    <div class="m-t-15 well" id="clientes" aria-expanded="true">
+                                    <div class="m-t-15 well" id="contacts" aria-expanded="true">
                                         <table class="table table-hover">
                                             <tbody>
                                                 <tr>                                            
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['vCliente'])) { if ($permissoes['vCliente'] == '1'){ echo 'checked'; }} ?> name="vCliente" type="checkbox" class="custom-control-input" id="vCliente" value="1" />
-                                                            <label class="custom-control-label" for="vCliente">Visualizar Cliente</label>
+                                                            <input <?php if (isset($permissoes ['vContact'])) { if ($permissoes['vContact'] == '1'){ echo 'checked'; }} ?> name="vContact" type="checkbox" class="custom-control-input" id="vContact" value="1" />
+                                                            <label class="custom-control-label" for="vContact">Visualizar Contacto</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['aCliente'])) { if ($permissoes['aCliente'] == '1'){ echo 'checked'; }} ?> name="aCliente" type="checkbox" class="custom-control-input" id="aCliente" value="1" />
-                                                            <label class="custom-control-label" for="aCliente">Adicionar Cliente</label>
+                                                            <input <?php if (isset($permissoes ['aContact'])) { if ($permissoes['aContact'] == '1'){ echo 'checked'; }} ?> name="aContact" type="checkbox" class="custom-control-input" id="aContact" value="1" />
+                                                            <label class="custom-control-label" for="aContact">Adicionar Contacto</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['eCliente'])) { if ($permissoes['eCliente'] == '1'){ echo 'checked'; }} ?> name="eCliente" type="checkbox" class="custom-control-input" id="eCliente" value="1" />
-                                                            <label class="custom-control-label" for="eCliente">Editar Cliente</label>
+                                                            <input <?php if (isset($permissoes ['eContact'])) { if ($permissoes['eContact'] == '1'){ echo 'checked'; }} ?> name="eContact" type="checkbox" class="custom-control-input" id="eContact" value="1" />
+                                                            <label class="custom-control-label" for="eContact">Editar Contacto</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['eCliente'])) { if ($permissoes['eCliente'] == '1'){ echo 'checked'; }} ?> name="dCliente" type="checkbox" class="custom-control-input" id="dCliente" value="1" />
-                                                            <label class="custom-control-label" for="dCliente">Excluir Cliente</label>
+                                                            <input <?php if (isset($permissoes ['eContact'])) { if ($permissoes['eContact'] == '1'){ echo 'checked'; }} ?> name="dContact" type="checkbox" class="custom-control-input" id="dContact" value="1" />
+                                                            <label class="custom-control-label" for="dContact">Excluir Contacto</label>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -90,7 +90,7 @@
                                         </table>
                                     </div>
                                 </div>
-                                <!--/Clientes-->
+                                <!--/Contacts-->
 
                                 <div class="col-md-12 mb-1 bord-permis">
                                     <a href="#fornecedores" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
@@ -368,8 +368,8 @@
                                                     </td>                                            
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['rCliente'])) { if ($permissoes['rCliente'] == '1'){ echo 'checked'; }} ?> name="rCliente" type="checkbox" class="custom-control-input" id="rCliente" value="1" />
-                                                            <label class="custom-control-label" for="rCliente">Rel. Cliente</label>
+                                                            <input <?php if (isset($permissoes ['rContact'])) { if ($permissoes['rContact'] == '1'){ echo 'checked'; }} ?> name="rContact" type="checkbox" class="custom-control-input" id="rContact" value="1" />
+                                                            <label class="custom-control-label" for="rContact">Rel. Contactos</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">

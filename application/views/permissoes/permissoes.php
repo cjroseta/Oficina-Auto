@@ -3,7 +3,7 @@
         <div class="col-lg-12 col-xlg-9 col-md-7">
             <div class="card pt-4 pl-0 pb-4">
                 <div class="col-sm-12 mb-3">
-                    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'aCliente')) { ?>
+                    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'cPermissao')) { ?>
                     <a href="<?php echo base_url(); ?>index.php/permissoes/adicionar" class="btn btn-success p-0-0">
                         <span class="button__icon"><i class="mdi mdi-plus-circle-outline"></i></span><span class="button__text2">Adicionar Permissão</span>
                     </a>
@@ -25,7 +25,7 @@
                         <tbody>
                             <?php
                                 if (!$results) {
-                                    echo '<tr><td colspan="7">Nenhum Cliente Cadastrado</td></tr>';
+                                    echo '<tr><td colspan="7">Nenhuma Permissão Cadastrada</td></tr>';
                                 }
                                 foreach ($results as $r) {
                                     if ($r->situacao == 1) {

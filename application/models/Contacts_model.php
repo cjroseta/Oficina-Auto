@@ -1,5 +1,5 @@
 <?php
-class Clientes_model extends CI_Model
+class Contacts_model extends CI_Model
 {
 
     public function __construct()
@@ -34,30 +34,30 @@ class Clientes_model extends CI_Model
     }
 
     public function contar_fornecedores() {
-        // Contar os registros onde valor da coluna tipo_cliente é 1
-        $this->db->where('tipo_cliente', 1);
-        $this->db->from('clientes');        
+        // Contar os registros onde valor da coluna tipo_contact é 1
+        $this->db->where('type_contact', 1);
+        $this->db->from('contacts');        
         return $this->db->count_all_results(); // Retorna o total
     }
 
-    public function contar_clientes() {
-        // Contar os registros onde valor da coluna tipo_cliente é 0
-        $this->db->where('tipo_cliente', 0);
-        $this->db->from('clientes');        
+    public function count_contacts() {
+        // Contar os registros onde valor da coluna tipo_contact é 0
+        $this->db->where('type_contact', 0);
+        $this->db->from('contacts');        
         return $this->db->count_all_results(); // Retorna o total
     }
 
     public function contar_empresa_publica() {
-        // Contar os registros onde valor da coluna tipo_cliente é 0
-        $this->db->where('categoria', 'Empresa Pública');
-        $this->db->from('clientes');        
+        // Contar os registros onde valor da coluna tipo_contact é 0
+        $this->db->where('category', 'Empresa Pública');
+        $this->db->from('contacts');        
         return $this->db->count_all_results(); // Retorna o total
     }
 
     public function contar_empresa_privada() {
-        // Contar os registros onde valor da coluna tipo_cliente é 0
-        $this->db->where('categoria', 'Empresa Privada');
-        $this->db->from('clientes');        
+        // Contar os registros onde valor da coluna tipo_contact é 0
+        $this->db->where('category', 'Empresa Privada');
+        $this->db->from('contacts');        
         return $this->db->count_all_results(); // Retorna o total
     }
 
@@ -65,7 +65,7 @@ class Clientes_model extends CI_Model
     {
         $this->db->select($fields);
         $this->db->from($table);
-        $this->db->order_by('idClientes', 'desc');
+        $this->db->order_by('idContacts', 'desc');
         $this->db->limit($perpage, $start);
         if ($where) {
             $this->db->where($where);
@@ -79,9 +79,9 @@ class Clientes_model extends CI_Model
 
     public function getById($id)
     {
-        $this->db->where('idClientes', $id);
+        $this->db->where('idContacts', $id);
         $this->db->limit(1);
-        return $this->db->get('clientes')->row();
+        return $this->db->get('contacts')->row();
     }
 
     public function delete($table, $fieldID, $ID)

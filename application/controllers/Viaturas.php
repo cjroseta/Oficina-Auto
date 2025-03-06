@@ -32,7 +32,7 @@ class Viaturas extends MY_Controller
         
         $this->pagination->initialize($this->data['configuration']);
         
-        $this->data['results'] = $this->viaturas_model->get('viaturas', 'idViatura,marca,matricula,modelo,clientes_id,num_chassis', '', $this->data['configuration']['per_page'], $this->uri->segment(3));
+        $this->data['results'] = $this->viaturas_model->get('viaturas', '*', '', $this->data['configuration']['per_page'], $this->uri->segment(3));
 
         $this->data['view'] = 'viaturas/viaturas';
         return $this->layout();
@@ -60,7 +60,7 @@ class Viaturas extends MY_Controller
                 'num_chassis'       => set_value('num_chassis'),
                 'capacidade_tanque' => set_value('capacidade_tanque'),
                 'tipo_combustivel'  => set_value('tipo_combustivel'),
-                'clientes_id'      => set_value('proprietario'),
+                'clientes_id'       => set_value('clientes_id'),
                 'status_viatura'    => set_value('status_viatura'),
                 'fotos'             => set_value('fotos'),
                 'notas'             => set_value('notas'),
@@ -164,4 +164,11 @@ class Viaturas extends MY_Controller
         }
     }
 
+    public function autoCompleteUsuario()
+    {
+        if (isset($_GET['term'])) {
+            $q = strtolower($_GET['term']);
+            $this->os_model->autoCompleteUsuario($q);
+        }
+    }
 }

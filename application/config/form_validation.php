@@ -1,10 +1,10 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
 $config = [
-    'clientes' => [
+    'contacts' => [
         [
-            'field' => 'nomeCliente',
-            'label' => 'Nome',
+            'field' => 'nameContact',
+            'label' => 'Nome/Razão Social',
             'rules' => 'required|trim',
             'errors' => [
                 'required'  => "O %s é obrigatório."
@@ -13,11 +13,16 @@ $config = [
         [
             'field' => 'nuit',
             'label' => 'NUIT',
-            'rules' => 'required|trim|is_unique[clientes.nuit]',
+            'rules' => 'required|trim|is_unique[contacts.nuit]',
             'errors' => [
                 'is_unique' => "O %s já existe.",
                 'required'  => "O %s é obrigatório."
             ],
+        ],
+        [
+            'field' => 'city',
+            'label' => 'Cidade',
+            'rules' => 'trim',
         ]
     ],
     'servicos' => [
@@ -38,6 +43,36 @@ $config = [
             'field' => 'preco',
             'label' => '',
             'rules' => 'required|trim',
+        ]
+    ],
+    'marcas' => [
+        [
+            'field' => 'nome',
+            'label' => 'Nome',
+            'rules' => 'required|trim|is_unique[marcas.nome]',
+            'errors' => [
+                'is_unique' => "O %s já existe."
+            ],
+        ],
+        [
+            'field' => 'descricao',
+            'label' => '',
+            'rules' => 'trim',
+        ]
+    ],
+    'modelos' => [
+        [
+            'field' => 'nome',
+            'label' => 'Nome',
+            'rules' => 'required|trim|is_unique[modelos.nome]',
+            'errors' => [
+                'is_unique' => "O %s já existe."
+            ],
+        ],
+        [
+            'field' => 'descricao',
+            'label' => '',
+            'rules' => 'trim',
         ]
     ],
     'produtos' => [
@@ -78,16 +113,24 @@ $config = [
     'viaturas' => [
         [
             'field' => 'matricula',
-            'label' => 'Matricula',
+            'label' => 'Matrícula',
             'rules' => 'required|trim|is_unique[viaturas.matricula]',
             'errors' => [
                 'is_unique' => "O %s já existe."
             ],
         ],
         [
-            'field' => 'proprietario',
-            'label' => 'Proprietário',
+            'field' => 'cliente',
+            'label' => 'Cliente',
             'rules' => 'required|trim',
+        ],
+        [
+            'field' => 'num_chassis',
+            'label' => 'Número do Chassis',
+            'rules' => 'required|trim|is_unique[viaturas.num_chassis]',
+            'errors' => [
+                'is_unique' => "O %s já existe."
+            ],
         ]
     ],
     'os' => [

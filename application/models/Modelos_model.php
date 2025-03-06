@@ -28,4 +28,13 @@ class Modelos_model extends CI_Model
         return $this->db->count_all($table);
     }
 
+    public function add($table, $data)
+    {
+        $this->db->insert($table, $data);
+        if ($this->db->affected_rows() == '1') {
+            return true;
+        }
+        
+        return false;
+    }
 }

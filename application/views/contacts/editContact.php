@@ -15,7 +15,7 @@
                     echo '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>' . $custom_error . '</div>';
                 } ?>
 
-                <form action="<?php echo current_url(); ?>" method="post" class="form-horizontal p-t-5" id="formCliente">
+                <form action="<?php echo current_url(); ?>" method="post" class="form-horizontal p-t-5" id="formContact">
                 
                     <div class="form-body">
                         <div class="card-body pb-0">
@@ -24,11 +24,11 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group has-danger row">
-                                        <?php echo form_hidden('idClientes', $result->idClientes) ?>
-                                        <label for="nomeCliente" class="control-label text-right col-md-3">Nome/Razão Social<span class="required text-danger">*</span></label>
+                                        <?php echo form_hidden('idContacts', $result->idContacts) ?>
+                                        <label for="nameContact" class="control-label text-right col-md-3">Nome/Razão Social<span class="required text-danger">*</span></label>
 
                                         <div class="col-md-9">
-                                            <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo $result->nomeCliente; ?>" class="form-control form-control-danger" />
+                                            <input id="nameContact" type="text" name="nameContact" value="<?php echo $result->nameContact; ?>" class="form-control form-control-danger" />
                                         </div>
                                     </div>
                                 </div>
@@ -50,10 +50,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="contato" class="control-label text-right col-md-3">Contacto</label>
-
+                                        <label for="contact" class="control-label text-right col-md-3">Contacto</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="contato" class="form-control" name="contato" value="<?php echo $result->contato; ?>" />
+                                            <input type="text" id="contact" class="form-control" name="contact" value="<?php echo $result->contact; ?>" />
                                         </div>
                                     </div>
                                 </div>
@@ -109,9 +108,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group has-danger row">
                                         <label for="cidade" class="control-label text-right col-md-3">Cidade</label>
-
                                         <div class="col-md-9">
-                                            <input id="cidade" type="text" name="cidade" value="<?php echo $result->cidade; ?>" class="form-control form-control-danger" />
+                                            <input id="city" type="text" name="city" value="<?php echo $result->city; ?>" class="form-control form-control-danger" />
                                         </div>
                                     </div>
                                 </div>
@@ -122,10 +120,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="endereco" class="control-label text-right col-md-3">Endereço</label>
-
+                                        <label for="address" class="control-label text-right col-md-3">Endereço</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="endereco" class="form-control" name="endereco" value="<?php echo $result->endereco; ?>" />
+                                            <input type="text" id="address" class="form-control" name="address" value="<?php echo $result->address; ?>" />
                                         </div>
                                     </div>
                                 </div>
@@ -133,16 +130,15 @@
                                 
                                 <div class="col-md-6">
                                     <div class="form-group row">
-                                        <label for="categoria" class="control-label text-right col-md-3">Categória<span class="required text-danger"> *</span></label>
+                                        <label for="category" class="control-label text-right col-md-3">Categória<span class="required text-danger"> *</span></label>
                                         <div class="col-md-9">
-                                            <select class="custom-select mr-sm-2" name="categoria" id="categoria">
-                                                 
+                                            <select class="custom-select mr-sm-2" name="category" id="category">                                                 
                                                 <option value=""></option>
-                                                <option <?= $result->categoria == 'Empresa Pública' ? 'selected' : '' ?> value="Empresa Pública">Empresa Pública</option>
-                                                <option <?= $result->categoria == 'Empresa Privada' ? 'selected' : '' ?> value="Empresa Privada">Empresa Privada</option>
-                                                <option <?= $result->categoria == 'ONG' ? 'selected' : '' ?> value="ONG">ONG</option>
-                                                <option <?= $result->categoria == 'Pessoa Física' ? 'selected' : '' ?> value="Pessoa Física">Pessoa Física</option>
-                                                <option <?= $result->categoria == 'Outros' ? 'selected' : '' ?> value="Outros">Outros</option>
+                                                <option <?= $result->category == 'Empresa Pública' ? 'selected' : '' ?> value="Empresa Pública">Empresa Pública</option>
+                                                <option <?= $result->category == 'Empresa Privada' ? 'selected' : '' ?> value="Empresa Privada">Empresa Privada</option>
+                                                <option <?= $result->category == 'ONG' ? 'selected' : '' ?> value="ONG">ONG</option>
+                                                <option <?= $result->category == 'Pessoa Física' ? 'selected' : '' ?> value="Pessoa Física">Pessoa Física</option>
+                                                <option <?= $result->category == 'Outros' ? 'selected' : '' ?> value="Outros">Outros</option>
                                             </select>
                                         </div>
                                     </div>
@@ -159,8 +155,8 @@
                                     <div class="form-group row">
                                         <label class="control-label text-right col-md-3">Tipo Contacto</label>
                                         <div class="col-lg-9">
-                                            <label for="tipo_cliente" class="text-left col-md-3 btn btn-secondary">Fornecedor
-                                                <input type="checkbox" id="tipo_cliente" name="tipo_cliente" value="1" class="m-l-15" <?= ($result->tipo_cliente == 1) ? 'checked' : '' ?>>
+                                            <label for="type_contact" class="text-left col-md-3 btn btn-secondary">Fornecedor
+                                                <input type="checkbox" id="type_contact" name="type_contact" value="1" class="m-l-15" <?= ($result->type_contact == 1) ? 'checked' : '' ?>>
                                             </label>
                                         </div>
                                     </div>
@@ -177,7 +173,7 @@
                             <div class="text-center p-25">
                                 <button type="submit" class="btn btn-success waves-effect waves-light p-0-0"><span class="button__icon"><i class="mdi mdi-content-save-all"></i></span><span class="button__text2">Actualizar</span></button>
 
-                                <a class="btn btn-danger waves-effect waves-light p-0-0" href="<?php echo site_url() ?>/clientes"><span class="button__icon"><i class="mdi mdi-reply-all"></i></span><span class="button__text2 p-r-20">Cancelar</span></a>
+                                <a class="btn btn-danger waves-effect waves-light p-0-0" href="<?php echo site_url() ?>/contacts"><span class="button__icon"><i class="mdi mdi-reply-all"></i></span><span class="button__text2 p-r-20">Cancelar</span></a>
                             </div>
                         </div>
                         <!-- End Form Action -->

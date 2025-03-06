@@ -28,11 +28,5 @@
         "psr-4": {
             "Libraries\\": "application/libraries"
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/map-os/asaas-sdk"
-        }
-    ]
+    }
 }

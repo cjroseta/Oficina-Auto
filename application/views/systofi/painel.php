@@ -8,7 +8,7 @@
 <link href='<?= base_url(); ?>assets/css/fullcalendar.min.css' rel='stylesheet' />
 
 <div class="container-fluid">
-    <!-- Start Row Cliente to OS -->
+    <!-- Start Row Contact to OS -->
     <div class="row">
         <div class="col-lg-3 col-md-6">
             <div class="card">
@@ -16,12 +16,12 @@
                     <div class="row align-items-center">
                         <div class="col-7">
                             <i class="mdi mdi-account-multiple font-24 text-success"></i>
-                            <a href="<?php echo base_url(); ?>index.php/clientes/adicionar">
+                            <a href="<?php echo base_url(); ?>index.php/contacts/addContact">
                                 <p class="font-16 m-b-5 text-secondary" data-toggle="tooltip" data-placement="top" title="Adicionar Contacto">Contactos</p>
                             </a>
                         </div>
                         <div class="col-5">
-                            <h1 class="font-light text-right mb-0"><?= $this->db->count_all('clientes'); ?></h1>
+                            <h1 class="font-light text-right mb-0"><?= $this->db->count_all('contacts'); ?></h1>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-    <!-- End Row Cliente to OS -->
+    <!-- End Row Contact to OS -->
 
     <!-- Start Row Contactos to Funcionarios -->
     <div class="row">

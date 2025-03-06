@@ -43,9 +43,9 @@
                                 <span class="hide-menu">Cadastros </span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) { ?>
+                                <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vContact')) { ?>
                                     <li class="sidebar-item">
-                                        <a href="<?= site_url('clientes') ?>" class="sidebar-link <?php if (isset($menuClientes)) { echo 'active'; } ?>">
+                                        <a href="<?= site_url('contacts') ?>" class="sidebar-link <?php if (isset($menuContacts)) { echo 'active'; } ?>">
                                             <i class="mdi mdi-account-multiple"></i>
                                             <span class="hide-menu"> Contacto </span>
                                             <span class="badge badge-pill badge-info ml-auto m-r-15">F1</span>
@@ -85,12 +85,12 @@
                             </ul>
                         </li>
 
-                        <!-- Cotações --> 
-                        <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCotacao')) { ?>
+                        <!-- Quotation --> 
+                        <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vQuotation')) { ?>
                             <li class="sidebar-item">
-                                <a class="sidebar-link waves-effect waves-dark sidebar-link <?php if (isset($menuCotacoes)) { echo 'active'; } ?>" href="<?= site_url('cotacoes') ?>" aria-expanded="false">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link <?php if (isset($menuQuotation)) { echo 'active'; } ?>" href="<?= site_url('quotation') ?>" aria-expanded="false">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span class="hide-menu">Orçamento</span>
+                                    <span class="hide-menu">Cotações</span>
                                     <span class="badge badge-pill badge-info ml-auto m-r-15">F5</span>
                                 </a>
                             </li>
@@ -99,11 +99,26 @@
                         <!-- Compras --> 
                         <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCompra')) { ?>
                             <li class="sidebar-item">
-                                <a class="sidebar-link waves-effect waves-dark sidebar-link <?php if (isset($menuCompras)) { echo 'active'; } ?>" href="<?= site_url('compras') ?>" aria-expanded="false">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark sidebar-link <?php if (isset($menuPurchase)) { echo 'active'; } ?>" href="<?= site_url('compras') ?>" aria-expanded="false">
                                     <i class="mdi mdi-cart"></i>
                                     <span class="hide-menu">Compras</span>
                                     <span class="badge badge-pill badge-info ml-auto m-r-15">F6</span>
                                 </a>
+                                <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link" <?php if (isset($menuPurchase)) { echo 'active'; } ?>" href="<?= site_url('purchaseOrder') ?>">
+                                        <i class="mdi mdi-adjust"></i>
+                                        <span class="hide-menu"> Ordens de Compra </span>
+                                    </a>
+                                </li>   
+
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link" <?php if (isset($menuPurchase)) { echo 'active'; } ?>" href="<?= site_url('purchases') ?>">
+                                        <i class="mdi mdi-adjust"></i>
+                                        <span class="hide-menu"> Compras </span>
+                                    </a>
+                                </li>
+                        </ul>
                             </li>
                         <?php } ?>
 
@@ -112,7 +127,7 @@
                             <li class="sidebar-item">
                                 <a class="sidebar-link waves-effect waves-dark sidebar-link <?php if (isset($menuJobcards)) { echo 'active'; } ?>" href="<?= site_url('jobCards') ?>" aria-expanded="false">
                                     <i class="mdi mdi-credit-card-multiple"></i>
-                                    <span class="hide-menu">Ordens de Serviços</span>
+                                    <span class="hide-menu">Ordens de Serviço</span>
                                     <span class="badge badge-pill badge-info ml-auto m-r-15">F7</span>
                                 </a>
                             </li>

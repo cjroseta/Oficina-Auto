@@ -18,6 +18,8 @@
                                 echo "Ordens de Serviços";
                             } elseif ($this->uri->segment(1) == "rh") {
                                 echo "Recursos Humanos";
+                            } elseif ($this->uri->segment(1) == "contacts") {
+                                echo "Contactos";
                             } else {
                                 echo ucfirst($this->uri->segment(1));
                             } 
