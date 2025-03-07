@@ -148,7 +148,7 @@
 
                                 <button type="reset" class="btn btn-warning waves-effect waves-light p-0-0"><span class="button__icon"><i class="mdi mdi-broom"></i></span><span class="button__text2 p-r-25">Limpar</span></button>
 
-                                <a class="btn btn-danger waves-effect waves-light p-0-0" href="<?php echo site_url() ?>/clientes"><span class="button__icon"><i class="mdi mdi-reply-all"></i></span><span class="button__text2 p-r-20">Cancelar</span></a>
+                                <a class="btn btn-danger waves-effect waves-light p-0-0" href="<?php echo site_url() ?>/viaturas"><span class="button__icon"><i class="mdi mdi-reply-all"></i></span><span class="button__text2 p-r-20">Cancelar</span></a>
                             </div>
                         </div>
                         <!-- End Form Action -->

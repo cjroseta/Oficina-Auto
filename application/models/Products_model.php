@@ -1,5 +1,5 @@
 <?php
-class Produtos_model extends CI_Model
+class Products_model extends CI_Model
 {
 
     public function __construct()
@@ -11,7 +11,7 @@ class Produtos_model extends CI_Model
     {
         $this->db->select($fields);
         $this->db->from($table);
-        $this->db->order_by('idProdutos', 'desc');
+        $this->db->order_by('idProduct', 'desc');
         $this->db->limit($perpage, $start);
         if ($where) {
             $this->db->where($where);
@@ -25,9 +25,9 @@ class Produtos_model extends CI_Model
 
     public function getById($id)
     {
-        $this->db->where('idProdutos', $id);
+        $this->db->where('idProduct', $id);
         $this->db->limit(1);
-        return $this->db->get('produtos')->row();
+        return $this->db->get('products')->row();
     }
 
     public function add($table, $data)

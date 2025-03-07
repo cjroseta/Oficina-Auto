@@ -12,10 +12,10 @@ class Systofi extends MY_Controller
     //Dashbord - Financeiro e Despesas
     public function index()
     {
-        //$this->data['produtos'] = $this->systofi_model->vendasInternasExternas();
-        //$this->data['produtos'] = $this->systofi_model->getItens();
-        $this->data['produtosSir'] = $this->systofi_model->getItensSir();
-        $this->data['produtosIndigena'] = $this->systofi_model->getItensIndigena();
+        //$this->data['products'] = $this->systofi_model->vendasInternasExternas();
+        //$this->data['products'] = $this->systofi_model->getItens();
+        //$this->data['productsSir'] = $this->systofi_model->getItensSir();
+        //$this->data['productsIndigena'] = $this->systofi_model->getItensIndigena();
         $this->data['estatisticas_financeiro'] = $this->systofi_model->getEstatisticasFinanceiro();
         $this->data['financeiro_mes'] = $this->systofi_model->getEstatisticasFinanceiroMes($this->input->get('year'));
         $this->data['financeiro_mes_dia'] = $this->systofi_model->getEstatisticasFinanceiroDia($this->input->get('year'));
@@ -31,9 +31,9 @@ class Systofi extends MY_Controller
     //Dashbord vendas realizadas
     public function painelVendas()
     {
-        $this->data['produtos'] = $this->systofi_model->getItens();
-        $this->data['produtosSir'] = $this->systofi_model->getItensSir();
-        $this->data['produtosIndigena'] = $this->systofi_model->getItensIndigena();
+        $this->data['products'] = $this->systofi_model->getItens();
+        $this->data['productsSir'] = $this->systofi_model->getItensSir();
+        $this->data['productsIndigena'] = $this->systofi_model->getItensIndigena();
         $this->data['estatisticas_financeiro'] = $this->systofi_model->getEstatisticasFinanceiro();
         $this->data['financeiro_mes'] = $this->systofi_model->getEstatisticasFinanceiroMes($this->input->get('year'));
         $this->data['financeiro_mes_dia'] = $this->systofi_model->getEstatisticasFinanceiroDia($this->input->get('year'));

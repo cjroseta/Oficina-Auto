@@ -249,35 +249,35 @@
                                 <!--/Job Card-->
 
                                 <div class="col-md-12 mb-1 bord-permis">
-                                    <a href="#compras" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
+                                    <a href="#purchases" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
                                         <h4 class="p-1"><i class="fas fa-shopping-bag text-cyan" data-toggle="tooltip"></i> Compras</h4>
                                     </a>
-                                    <div class="collapse m-t-15 well" id="compras" aria-expanded="true">
+                                    <div class="collapse m-t-15 well" id="purchases" aria-expanded="true">
                                         <table class="table table-hover">
                                             <tbody>
                                                 <tr>                                            
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['vCompra'])) { if ($permissoes['vCompra'] == '1'){ echo 'checked'; }} ?> name="vCompra" type="checkbox" class="custom-control-input" id="vCompra" value="1" />
-                                                            <label class="custom-control-label" for="vCompra">Visualizar Compra</label>
+                                                            <input <?php if (isset($permissoes ['vPurchase'])) { if ($permissoes['vPurchase'] == '1'){ echo 'checked'; }} ?> name="vPurchase" type="checkbox" class="custom-control-input" id="vPurchase" value="1" />
+                                                            <label class="custom-control-label" for="vPurchase">Visualizar Compra</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['aCompra'])) { if ($permissoes['aCompra'] == '1'){ echo 'checked'; }} ?> name="aCompra" type="checkbox" class="custom-control-input" id="aCompra" value="1" />
-                                                            <label class="custom-control-label" for="aCompra">Adicionar Compra</label>
+                                                            <input <?php if (isset($permissoes ['aPurchase'])) { if ($permissoes['aPurchase'] == '1'){ echo 'checked'; }} ?> name="aPurchase" type="checkbox" class="custom-control-input" id="aPurchase" value="1" />
+                                                            <label class="custom-control-label" for="aPurchase">Adicionar Compra</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['eCompra'])) { if ($permissoes['eCompra'] == '1'){ echo 'checked'; }} ?> name="eCompra" type="checkbox" class="custom-control-input" id="eCompra" value="1" />
-                                                            <label class="custom-control-label" for="eCompra">Editar Compra</label>
+                                                            <input <?php if (isset($permissoes ['ePurchase'])) { if ($permissoes['ePurchase'] == '1'){ echo 'checked'; }} ?> name="ePurchase" type="checkbox" class="custom-control-input" id="ePurchase" value="1" />
+                                                            <label class="custom-control-label" for="ePurchase">Editar Compra</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['dCompra'])) { if ($permissoes['dCompra'] == '1'){ echo 'checked'; }} ?> name="dCompra" type="checkbox" class="custom-control-input" id="dCompra" value="1" />
-                                                            <label class="custom-control-label" for="dCompra">Excluir Compra</label>
+                                                            <input <?php if (isset($permissoes ['dPurchase'])) { if ($permissoes['dPurchase'] == '1'){ echo 'checked'; }} ?> name="dPurchase" type="checkbox" class="custom-control-input" id="dPurchase" value="1" />
+                                                            <label class="custom-control-label" for="dPurchase">Excluir Compra</label>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -285,7 +285,46 @@
                                         </table>
                                     </div>
                                 </div>
-                                <!--/Compras--> 
+                                <!--/Purchases--> 
+                                
+                                <div class="col-md-12 mb-1 bord-permis">
+                                    <a href="#po" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
+                                        <h4 class="p-1"><i class="fas fa-shopping-bag text-cyan" data-toggle="tooltip"></i> Ordens de Compra</h4>
+                                    </a>
+                                    <div class="collapse m-t-15 well" id="po" aria-expanded="true">
+                                        <table class="table table-hover">
+                                            <tbody>
+                                                <tr>                                            
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input <?php if (isset($permissoes ['vPO'])) { if ($permissoes['vPO'] == '1'){ echo 'checked'; }} ?> name="vPO" type="checkbox" class="custom-control-input" id="vPO" value="1" />
+                                                            <label class="custom-control-label" for="vPO">Visualizar Compra</label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input <?php if (isset($permissoes ['aPO'])) { if ($permissoes['aPO'] == '1'){ echo 'checked'; }} ?> name="aPO" type="checkbox" class="custom-control-input" id="aPO" value="1" />
+                                                            <label class="custom-control-label" for="aPO">Adicionar Compra</label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input <?php if (isset($permissoes ['ePO'])) { if ($permissoes['ePO'] == '1'){ echo 'checked'; }} ?> name="ePO" type="checkbox" class="custom-control-input" id="ePO" value="1" />
+                                                            <label class="custom-control-label" for="ePO">Editar Compra</label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input <?php if (isset($permissoes ['dPO'])) { if ($permissoes['dPO'] == '1'){ echo 'checked'; }} ?> name="dPO" type="checkbox" class="custom-control-input" id="dPO" value="1" />
+                                                            <label class="custom-control-label" for="dPO">Excluir Compra</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--/Purchases--> 
 
                                 <div class="col-md-12 mb-1 bord-permis">
                                     <a href="#financeiros" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
@@ -388,8 +427,8 @@
                                                 <tr>   
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['rProduto'])) { if ($permissoes['rProduto'] == '1'){ echo 'checked'; }} ?> name="rProduto" type="checkbox" class="custom-control-input" id="rProduto" value="1" />
-                                                            <label class="custom-control-label" for="rProduto">Rel. Producto</label>
+                                                            <input <?php if (isset($permissoes ['rProduct'])) { if ($permissoes['rProduct'] == '1'){ echo 'checked'; }} ?> name="rProduct" type="checkbox" class="custom-control-input" id="rProduct" value="1" />
+                                                            <label class="custom-control-label" for="rProduct">Rel. Producto</label>
                                                         </div>
                                                     </td>                                         
                                                     <td class="p-1">
@@ -415,13 +454,13 @@
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
                                                             <input <?php if (isset($permissoes ['rSaida'])) { if ($permissoes['rSaida'] == '1'){ echo 'checked'; }} ?> name="rSaida" type="checkbox" class="custom-control-input" id="rSaida" value="1" />
-                                                            <label class="custom-control-label" for="rSaida">Rel. Saída</label>
+                                                            <label class="custom-control-label" for="rSaida">Rel. Saidas</label>
                                                         </div>
                                                     </td>                                               
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['rCompra'])) { if ($permissoes['rCompra'] == '1'){ echo 'checked'; }} ?> name="rCompra" type="checkbox" class="custom-control-input" id="rCompra" value="1" />
-                                                            <label class="custom-control-label" for="rCompra">Rel. Compras</label>
+                                                            <input <?php if (isset($permissoes ['rPurchase'])) { if ($permissoes['rPurchase'] == '1'){ echo 'checked'; }} ?> name="rPurchase" type="checkbox" class="custom-control-input" id="rPurchase" value="1" />
+                                                            <label class="custom-control-label" for="rPurchase">Rel. Compras</label>
                                                         </div>
                                                     </td>                                                   
                                                     <td class="p-1">
@@ -466,35 +505,35 @@
                         <div class="col-md-6">
                             <div class="row">                                
                                 <div class="col-md-12 ml-1 mb-1 bord-permis">
-                                    <a href="#produtos" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
+                                    <a href="#products" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
                                         <h4 class="p-1"><i class="fas fa-cubes text-cyan" data-toggle="tooltip"></i> Productos</h4>
                                     </a>
-                                    <div class="collapse m-t-15 well" id="produtos" aria-expanded="true">
+                                    <div class="collapse m-t-15 well" id="products" aria-expanded="true">
                                         <table class="table table-hover">
                                             <tbody>
                                                 <tr>                                            
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['vProduto'])) { if ($permissoes['vProduto'] == '1'){ echo 'checked'; }} ?> name="vProduto" type="checkbox" class="custom-control-input" id="vProduto" value="1" />
-                                                            <label class="custom-control-label" for="vProduto">Visualizar Productos</label>
+                                                            <input <?php if (isset($permissoes ['vProduct'])) { if ($permissoes['vProduct'] == '1'){ echo 'checked'; }} ?> name="vProduct" type="checkbox" class="custom-control-input" id="vProduct" value="1" />
+                                                            <label class="custom-control-label" for="vProduct">Visualizar Productos</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['aProduto'])) { if ($permissoes['aProduto'] == '1'){ echo 'checked'; }} ?> name="aProduto" type="checkbox" class="custom-control-input" id="aProduto" value="1" />
-                                                            <label class="custom-control-label" for="aProduto">Adicionar Productos</label>
+                                                            <input <?php if (isset($permissoes ['aProduct'])) { if ($permissoes['aProduct'] == '1'){ echo 'checked'; }} ?> name="aProduct" type="checkbox" class="custom-control-input" id="aProduct" value="1" />
+                                                            <label class="custom-control-label" for="aProduct">Adicionar Productos</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['eProduto'])) { if ($permissoes['eProduto'] == '1'){ echo 'checked'; }} ?> name="eProduto" type="checkbox" class="custom-control-input" id="eProduto" value="1" />
-                                                            <label class="custom-control-label" for="eProduto">Editar Productos</label>
+                                                            <input <?php if (isset($permissoes ['eProduct'])) { if ($permissoes['eProduct'] == '1'){ echo 'checked'; }} ?> name="eProduct" type="checkbox" class="custom-control-input" id="eProduct" value="1" />
+                                                            <label class="custom-control-label" for="eProduct">Editar Productos</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input <?php if (isset($permissoes ['dProduto'])) { if ($permissoes['dProduto'] == '1'){ echo 'checked'; }} ?> name="dProduto" type="checkbox" class="custom-control-input" id="dProduto" value="1" />
-                                                            <label class="custom-control-label" for="dProduto">Excluir Productos</label>
+                                                            <input <?php if (isset($permissoes ['dProduct'])) { if ($permissoes['dProduct'] == '1'){ echo 'checked'; }} ?> name="dProduct" type="checkbox" class="custom-control-input" id="dProduct" value="1" />
+                                                            <label class="custom-control-label" for="dProduct">Excluir Productos</label>
                                                         </div>
                                                     </td>
                                                 </tr>

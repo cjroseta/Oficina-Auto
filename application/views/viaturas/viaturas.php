@@ -51,7 +51,7 @@
                                     echo '<td>' . $r->marca . '</td>';
                                     echo '<td>' . $r->modelo . '</td>';
                                     echo '<td>' . $r->num_chassis . '</td>';
-                                    echo '<td>' . $r->nomeCliente . '</td>';
+                                    echo '<td>' . $r->nameContact . '</td>';
                                     echo '<td class="text-center">';
                                     
                                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vViatura')) {

@@ -31,22 +31,22 @@ class Systofi_model extends CI_Model
     public function getItens()
     {
         $query = "
-            SELECT produtos.*, SUM(produtos.estoque * produtos.precoCompra) as valorEstoque
-            FROM produtos
-            GROUP BY produtos.idProdutos
+            SELECT products.*, SUM(products.actual_stock * products.price_purchase) as valorEstoque
+            FROM products
+            GROUP BY products.idProduct
             ORDER BY descricao
         ";
 
         return $this->db->query($query)->result();
     }
 
-    public function getItensSir()
+    /*public function getItensSir()
     {
         $query = "
-            SELECT produtos.*, SUM(produtos.estoque * produtos.precoCompra) as valorEstoque
-            FROM produtos
+            SELECT products.*, SUM(products.actual_stock * products.price_purchase) as valorEstoque
+            FROM products
             WHERE grupo = 'sir'
-            GROUP BY produtos.idProdutos
+            GROUP BY products.idProduct
             ORDER BY descricao
         ";
 
@@ -56,15 +56,15 @@ class Systofi_model extends CI_Model
     public function getItensIndigena()
     {
         $query = "
-            SELECT produtos.*, SUM(produtos.estoque * produtos.precoCompra) as valorEstoque
-            FROM produtos
-            WHERE produtos.grupo = 'indigena'
-            GROUP BY produtos.idProdutos
+            SELECT products.*, SUM(products.actual_stock * products.price_purchase) as valorEstoque
+            FROM products
+            WHERE products.grupo = 'indigena'
+            GROUP BY products.idProduct
             ORDER BY descricao
         ";
 
         return $this->db->query($query)->result();
-    }
+    }*/
 
     public function getEstatisticasFinanceiroDia($year)
     {

@@ -9,9 +9,9 @@ class Viaturas_model extends CI_Model
 
     public function get($table, $fields, $where = '', $perpage = 0, $start = 0, $one = false, $array = 'array')
     {
-        $this->db->select($fields . ',clientes.nomeCliente');
+        $this->db->select($fields . ',contacts.nameContact');
         $this->db->from($table);
-        $this->db->join('clientes', 'clientes.idClientes = viaturas.clientes_id');
+        $this->db->join('contacts', 'contacts.idContacts = viaturas.clientes_id');
         $this->db->order_by('idViatura', 'desc');
         $this->db->limit($perpage, $start);
         if ($where) {
@@ -73,20 +73,20 @@ class Viaturas_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->limit(25);
-        $this->db->like('nomeCliente', $q);
+        $this->db->like('nameContact', $q);
         $this->db->or_like('telefone', $q);
         $this->db->or_like('celular', $q);
         $this->db->or_like('nuit', $q);
-        $query = $this->db->get('clientes');
+        $query = $this->db->get('contacts');
         if ($query->num_rows() > 0) {
             foreach ($query->result_array() as $row) 
             {
                 $row_set[] = [
-                    'label' => $row['nomeCliente'] . 
+                    'label' => $row['nameContact'] . 
                     ' | Telefone: ' . $row['telefone'] . 
                     ' | Celular: ' . $row['celular'] . 
                     ' | NUIT: ' . $row['nuit'], 
-                    'id' => $row['idClientes']
+                    'id' => $row['idContacts']
                 ];
             }
             echo json_encode($row_set);

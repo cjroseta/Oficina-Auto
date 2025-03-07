@@ -38,7 +38,7 @@
       location.href = '<?= site_url('contacts'); ?>';
     });
     shortcut.add("F2", function() {
-      location.href = '<?= site_url('produtos'); ?>';
+      location.href = '<?= site_url('products'); ?>';
     });
     shortcut.add("F3", function() {
       location.href = '<?= site_url('viaturas'); ?>';
@@ -77,7 +77,7 @@
       location.href = '<?= site_url('contacts/addContact'); ?>';
     });
     shortcut.add("2", function() {
-      location.href = '<?= site_url('produtos/adicionar'); ?>';
+      location.href = '<?= site_url('products/adicionar'); ?>';
     });
     shortcut.add("3", function() {
       location.href = '<?= site_url('viaturas/adicionar'); ?>';
@@ -208,7 +208,7 @@
                                                 <a class="dropdown-item pl-2 pt-1 pb-1" data-toggle="modal" data-target="#add1-cliente-modal" data-whatever="@getbootstrap" href="">Contact</a>
                                             <?php } ?>
 
-                                            <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rProduto')) { ?>
+                                            <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rProduct')) { ?>
                                                 <a class="dropdown-item pl-2 pt-1 pb-1" href="">Producto</a>
                                             <?php } ?>
 
@@ -278,8 +278,8 @@
                                                 <a class="dropdown-item pl-2 pt-1 pb-1" href="<?= site_url('relatorios/contacts') ?>">Contactos</a>
                                             <?php } ?>
 
-                                            <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rProduto')) { ?>
-                                                <a class="dropdown-item pl-2 pt-1 pb-1" href="<?= site_url('relatorios/produtos') ?>">Productos</a>
+                                            <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rProduct')) { ?>
+                                                <a class="dropdown-item pl-2 pt-1 pb-1" href="<?= site_url('relatorios/products') ?>">Productos</a>
                                             <?php } ?>
 
                                             <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rFornecedor')) { ?>

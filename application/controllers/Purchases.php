@@ -1,12 +1,12 @@
 <?php if (!defined('BASEPATH')) { exit('No direct script access allowed'); }
 
-class Compras extends MY_Controller
+class Purchases extends MY_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('compras_model');
-        $this->data['menuCompras'] = 'Compras';
+        $this->load->model('purchases_model');
+        $this->data['menuPurchases'] = 'Compras';
     }
 
     public function index()

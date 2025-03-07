@@ -75,16 +75,16 @@ $config = [
             'rules' => 'trim',
         ]
     ],
-    'produtos' => [
+    'products' => [
         [
-            'field' => 'descricao',
-            'label' => 'Descrição',
+            'field' => 'name',
+            'label' => 'Nome do Producto',
             'rules' => 'required|trim',
         ],
         [
-            'field' => 'codigo',
-            'label' => 'Código',
-            'rules' => 'required|trim|is_unique[produtos.codigo]',
+            'field' => 'bar_code',
+            'label' => 'Código de Barra',
+            'rules' => 'required|trim|is_unique[products.bar_code]',
             'errors' => [
                 'is_unique' => "O %s já existe."
             ],

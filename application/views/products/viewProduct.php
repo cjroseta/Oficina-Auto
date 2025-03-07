@@ -10,69 +10,65 @@
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>ID</strong></td>
                                         <td>
-                                        <?php echo $result->idProdutos ?>
+                                        <?php echo $result->idProduct ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: right;width: 30%"><strong>Descrição</strong></td>
+                                        <td style="text-align: right;width: 30%"><strong>Nome</strong></td>
                                         <td>
-                                        <?php echo $result->descricao ?>
+                                        <?php echo $result->name ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Código</strong></td>
                                         <td>
-                                        <?php echo $result->codigo ?>
+                                        <?php echo $result->bar_code ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Modelo</strong></td>
                                         <td>
-                                        <?php echo $result->modelo ?>
+                                        
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Localização</strong></td>
                                         <td>
-                                        <?php echo $result->localizacao ?>
+                                        
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: right;width: 30%"><strong>Preço de Compra</strong></td>
+                                        <td style="text-align: right;width: 30%"><strong>Custo</strong></td>
                                         <td>
-                                        <?php echo $result->precoCompra ?>
+                                        <?php echo $result->cost ?>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: right;width: 30%"><strong>Preço de Venda</strong></td>
+                                        <td style="text-align: right;width: 30%"><strong>Preço</strong></td>
                                         <td>
-                                        <?php echo $result->precoVenda ?>
+                                        <?php echo $result->price ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Estoque</strong></td>
                                         <td>
-                                        <?php echo $result->estoque ?>
+                                        <?php echo $result->stock ?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Estoque Minimo</strong></td>
                                         <td>
-                                        <?php echo $result->estoqueMinimo ?>
+                                        <?php echo $result->min_stock ?>
                                         </td>
-                                    </tr>                                    
-                                    <tr>
-                                        <td style="text-align: right;width: 30%"><strong>Estoque Inicial</strong></td>
-                                        <td><?php echo $result->estoqueInicial ?></td>
-                                    </tr>
+                                    </tr>   
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Data de Cadastro</strong></td>
-                                        <td><?php echo date('d/m/Y', strtotime($result->dataCadastro)) ?></td>
+                                        <td><?php echo date('d/m/Y', strtotime($result->created_at)) ?></td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: right;width: 30%"><strong>Data de Ultima Actulização</strong></td>
                                         <td>
-                                            <?php echo date('d/m/Y', strtotime($result->ultimaAtualizacao)) ?>
+                                            <?php echo date('d/m/Y', strtotime($result->update_at)) ?>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -80,13 +76,13 @@
                         </div>
 
                 <div class="card-footer text-center p-4">
-                    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eCliente')) {
-                        echo '<a href="'. base_url() .'index.php/produtos/editar/'. $result->idProdutos .'" class="btn btn-info p-0-0">
+                    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eProduct')) {
+                        echo '<a href="'. base_url() .'index.php/products/editProduct/'. $result->idProduct .'" class="btn btn-info p-0-0">
                         <span class="button__icon"><i class="mdi mdi-pencil-box-outline"></i></span><span class="button__text2 p-r-30">Editar</span>
                         </a>';                        
                     } ?>
 
-                        <a href="<?php echo base_url(); ?>index.php/produtos" class="btn btn-warning p-0-0">
+                        <a href="<?php echo base_url(); ?>index.php/products" class="btn btn-warning p-0-0">
                         <span class="button__icon"><i class="mdi mdi-undo-variant"></i></span><span class="button__text2 p-r-30">Voltar</span>
                     </a>
                 </div>

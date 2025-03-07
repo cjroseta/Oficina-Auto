@@ -33,12 +33,12 @@
                     <div class="row align-items-center">
                         <div class="col-7">
                             <i class="mdi mdi-package-variant font-24 text-danger"></i>
-                            <a href="<?php echo base_url(); ?>index.php/produtos/adicionar">
+                            <a href="<?php echo base_url(); ?>index.php/products/addProduct">
                                 <p class="font-16 m-b-5 text-secondary" data-toggle="tooltip" data-placement="top" title="Adicionar Productos">Productos</p>
                             </a>
                         </div>
                         <div class="col-5">
-                            <h1 class="font-light text-right mb-0"><?= $this->db->count_all('produtos'); ?></h1>
+                            <h1 class="font-light text-right mb-0"><?= $this->db->count_all('products'); ?></h1>
                         </div>
                     </div>
                 </div>
@@ -700,7 +700,7 @@
                                         </div>
                                         < !--
                                         <div class="col-7">
-                                            <h3 class="font-light text-right"><span></?= number_format(array_sum(array_column($produtos, 'vendasExternas')), 2, ',', '.'); ?></span></h3>
+                                            <h3 class="font-light text-right"><span></?= number_format(array_sum(array_column($products, 'vendasExternas')), 2, ',', '.'); ?></span></h3>
 
                                             
                                         </div>- ->
@@ -717,7 +717,7 @@
                                             <h5 class="card-title">SIR Motors<span class="font-14 font-normal op-5"></span></h5>
                                         </div>
                                         <div class="col-7">
-                                            <h3 class="font-light text-right"><span><?= array_sum(array_column($produtosSir, 'estoque')) ?></span></h3>
+                                            <h3 class="font-light text-right"><span></?= array_sum(array_column($productsSir, 'estoque')) ?></span></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -732,7 +732,7 @@
                                             <h4 class="card-title">Indigena<span class="font-14 font-normal op-5"></span></h4>
                                         </div>
                                         <div class="col-7">
-                                            <h3 class="font-light text-right"><span><?= array_sum(array_column($produtosIndigena, 'estoque')) ?></span></h3>
+                                            <h3 class="font-light text-right"><span></?= array_sum(array_column($productsIndigena, 'estoque')) ?></span></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -750,7 +750,7 @@
                                             <h5 class="card-title">Valor do Estoque<span class="font-14 font-normal op-5"></span></h5>
                                         </div>
                                         < !--<div class="col-7">
-                                            <h4 class="font-light text-right"><span></?= number_format(array_sum(array_column($produtos, 'valorEstoque')), 2, ',', '.'); ?> Mtn</span></h4>
+                                            <h4 class="font-light text-right"><span></?= number_format(array_sum(array_column($products, 'valorEstoque')), 2, ',', '.'); ?> Mtn</span></h4>
                                         </div>- ->
                                     </div>
                                 </div>
@@ -765,7 +765,7 @@
                                             <h4 class="card-title">SIR Motors<span class="font-14 font-normal op-5"></span></h4>
                                         </div>
                                         <div class="col-7">
-                                            <h4 class="font-light text-right"><span><?= number_format(array_sum(array_column($produtosSir, 'valorEstoque')), 2, ',', '.'); ?> Mtn</span></h4>
+                                            <h4 class="font-light text-right"><span></?= number_format(array_sum(array_column($productsSir, 'valorEstoque')), 2, ',', '.'); ?> Mtn</span></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -780,7 +780,7 @@
                                             <h4 class="card-title">Indigena<span class="font-14 font-normal op-5"></span></h4>
                                         </div>
                                         <div class="col-7">
-                                            <h4 class="font-light text-right"><span><?= number_format(array_sum(array_column($produtosIndigena, 'valorEstoque')), 2, ',', '.'); ?> Mtn</span></h4>
+                                            <h4 class="font-light text-right"><span></?= number_format(array_sum(array_column($productsIndigena, 'valorEstoque')), 2, ',', '.'); ?> Mtn</span></h4>
                                         </div>
                                     </div>
                                 </div>

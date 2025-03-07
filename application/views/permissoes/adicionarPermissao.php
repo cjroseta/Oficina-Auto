@@ -230,43 +230,82 @@
                                 <!--/Job Card-->
 
                                 <div class="col-md-12 mb-1 bord-permis">
-                                    <a href="#compras" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
+                                    <a href="#purchases" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
                                         <h4 class="p-1"><i class="fas fa-shopping-bag text-cyan" data-toggle="tooltip"></i> Compras</h4>
                                     </a>
-                                    <div class="collapse m-t-15 well" id="compras" aria-expanded="true">
+                                    <div class="collapse m-t-15 well" id="purchases" aria-expanded="true">
                                         <table class="table table-hover">
                                             <tbody>
                                                 <tr>                                            
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="vCompra" checked="checked" type="checkbox" class="custom-control-input" id="vCompra" value="1" />
-                                                            <label class="custom-control-label" for="vCompra">Visualizar Compra</label>
+                                                            <input name="vPurchase" checked="checked" type="checkbox" class="custom-control-input" id="vPurchase" value="1" />
+                                                            <label class="custom-control-label" for="vPurchase">Visualizar Compra</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="aCompra" type="checkbox" class="custom-control-input" id="aCompra" value="1" />
-                                                            <label class="custom-control-label" for="aCompra">Adicionar Compra</label>
+                                                            <input name="aPurchase" type="checkbox" class="custom-control-input" id="aPurchase" value="1" />
+                                                            <label class="custom-control-label" for="aPurchase">Adicionar Compra</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="eCompra" type="checkbox" class="custom-control-input" id="eCompra" value="1" />
-                                                            <label class="custom-control-label" for="eCompra">Editar Compra</label>
+                                                            <input name="ePurchase" type="checkbox" class="custom-control-input" id="ePurchase" value="1" />
+                                                            <label class="custom-control-label" for="ePurchase">Editar Compra</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="dCompra" type="checkbox" class="custom-control-input" id="dCompra" value="1" />
-                                                            <label class="custom-control-label" for="dCompra">Excluir Compra</label>
+                                                            <input name="dPurchase" type="checkbox" class="custom-control-input" id="dPurchase" value="1" />
+                                                            <label class="custom-control-label" for="dPurchase">Excluir Compra</label>
                                                         </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                                <!--/Compras--> 
+                                </div>                                
+                                <!--/Purchases--> 
+
+                                <div class="col-md-12 mb-1 bord-permis">
+                                    <a href="#po" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
+                                        <h4 class="p-1"><i class="fas fa-shopping-bag text-cyan" data-toggle="tooltip"></i> Ordens de Compra</h4>
+                                    </a>
+                                    <div class="collapse m-t-15 well" id="po" aria-expanded="true">
+                                        <table class="table table-hover">
+                                            <tbody>
+                                                <tr>                                            
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input name="vPO" checked="checked" type="checkbox" class="custom-control-input" id="vPO" value="1" />
+                                                            <label class="custom-control-label" for="vPO">Visualizar PO</label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input name="aPO" type="checkbox" class="custom-control-input" id="aPO" value="1" />
+                                                            <label class="custom-control-label" for="aPO">Adicionar PO</label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input name="ePO" type="checkbox" class="custom-control-input" id="ePO" value="1" />
+                                                            <label class="custom-control-label" for="ePO">Editar PO</label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-1">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input name="dPO" type="checkbox" class="custom-control-input" id="dPO" value="1" />
+                                                            <label class="custom-control-label" for="dPO">Excluir PO</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>                                
+                                <!--/Purchases Order--> 
 
                                 <div class="col-md-12 mb-1 bord-permis">
                                     <a href="#financeiros" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
@@ -369,14 +408,14 @@
                                                 <tr> 
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="rProduto" type="checkbox" class="custom-control-input" id="rProduto" value="1" />
-                                                            <label class="custom-control-label" for="rProduto">Rel. Producto</label>
+                                                            <input name="rProduct" type="checkbox" class="custom-control-input" id="rProduct" value="1" />
+                                                            <label class="custom-control-label" for="rProduct">Rel. Producto</label>
                                                         </div>
                                                     </td>    
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="rProduto" type="checkbox" class="custom-control-input" id="rProduto" value="1" />
-                                                            <label class="custom-control-label" for="rProduto">Rel. Producto</label>
+                                                            <input name="rProduct" type="checkbox" class="custom-control-input" id="rProduct" value="1" />
+                                                            <label class="custom-control-label" for="rProduct">Rel. Producto</label>
                                                         </div>
                                                     </td>                                        
                                                     <td class="p-1">
@@ -405,35 +444,35 @@
                         <div class="col-md-6">
                             <div class="row">                                
                                 <div class="col-md-12 ml-1 mb-1 bord-permis">
-                                    <a href="#produtos" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
+                                    <a href="#Products" data-toggle="collapse" aria-expanded="true" class="text-secondary">                                
                                         <h4 class="p-1"><i class="fas fa-cubes text-cyan" data-toggle="tooltip"></i> Productos</h4>
                                     </a>
-                                    <div class="collapse m-t-15 well" id="produtos" aria-expanded="true">
+                                    <div class="collapse m-t-15 well" id="Products" aria-expanded="true">
                                         <table class="table table-hover">
                                             <tbody>
                                                 <tr>                                            
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="vProduto" checked="checked" type="checkbox" class="custom-control-input" id="vProduto" value="1" />
-                                                            <label class="custom-control-label" for="vProduto">Visualizar Productos</label>
+                                                            <input name="vProduct" checked="checked" type="checkbox" class="custom-control-input" id="vProduct" value="1" />
+                                                            <label class="custom-control-label" for="vProduct">Visualizar Productos</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="aProduto" type="checkbox" class="custom-control-input" id="aProduto" value="1" />
-                                                            <label class="custom-control-label" for="aProduto">Adicionar Productos</label>
+                                                            <input name="aProduct" type="checkbox" class="custom-control-input" id="aProduct" value="1" />
+                                                            <label class="custom-control-label" for="aProduct">Adicionar Productos</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="eProduto" type="checkbox" class="custom-control-input" id="eProduto" value="1" />
-                                                            <label class="custom-control-label" for="eProduto">Editar Productos</label>
+                                                            <input name="eProduct" type="checkbox" class="custom-control-input" id="eProduct" value="1" />
+                                                            <label class="custom-control-label" for="eProduct">Editar Productos</label>
                                                         </div>
                                                     </td>
                                                     <td class="p-1">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input name="dProduto" type="checkbox" class="custom-control-input" id="dProduto" value="1" />
-                                                            <label class="custom-control-label" for="dProduto">Excluir Productos</label>
+                                                            <input name="dProduct" type="checkbox" class="custom-control-input" id="dProduct" value="1" />
+                                                            <label class="custom-control-label" for="dProduct">Excluir Productos</label>
                                                         </div>
                                                     </td>
                                                 </tr>
