@@ -101,16 +101,16 @@ class Products extends MY_Controller
             $price = $this->input->post('price');
             $price = str_replace(",", "", $price);
             $data = [
-                'bar_code'  => set_value('bar_code'),
-                'name'      => set_value('name'),
-                'unit'      => set_value('unit'),
-                'cost'      => $cost,
-                'price'     => $price,            
-                'update_at' => date('Y-m-d'),
-                'stock'     => set_value('stock'),
-                'min_stock' => set_value('min_stock'),
-                'saida'     => set_value('saida'),
-                'entrada'   => set_value('entrada'),
+                'bar_code'    => set_value('bar_code'),
+                'name'        => set_value('name'),
+                'unit'        => set_value('unit'),
+                'cost'        => $cost,
+                'price'       => $price,            
+                'updated_at'  => date('Y-m-d'),
+                'stock'       => set_value('stock'),
+                'min_stock'   => set_value('min_stock'),
+                'saida'       => set_value('saida'),
+                'entrada'     => set_value('entrada'),
             ];
 
             if ($this->products_model->edit('products', $data, 'idProduct', $this->input->post('idProduct')) == true) {

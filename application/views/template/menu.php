@@ -81,7 +81,7 @@
 
                         <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vServico')) { ?>
                             <li class="sidebar-item">
-                                <a href="<?= site_url('servicos') ?>" class="sidebar-link <?php if (isset($menuServicos)) {
+                                <a href="<?= site_url('services') ?>" class="sidebar-link <?php if (isset($menuServices)) {
                                                                                                 echo 'active';
                                                                                             } ?>">
                                     <i class="mdi mdi-oil"></i>

@@ -10,9 +10,9 @@
                             echo "<h3>Dashboard</h3>";
                         } else {
                             // Personalizar os nomes dos Controllers
-                            if ($this->uri->segment(1) == "servicos") {
+                            if ($this->uri->segment(1) == "services") {
                                 echo "Serviços";
-                            } elseif ($this->uri->segment(1) == "cotacoes") {
+                            } elseif ($this->uri->segment(1) == "quotations") {
                                 echo "Cotações";
                             } elseif ($this->uri->segment(1) == "jobCards") {
                                 echo "Ordens de Serviços";

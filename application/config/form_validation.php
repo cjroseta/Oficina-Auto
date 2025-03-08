@@ -25,23 +25,23 @@ $config = [
             'rules' => 'trim',
         ]
     ],
-    'servicos' => [
+    'services' => [
         [
-            'field' => 'nome',
+            'field' => 'name_service',
             'label' => 'Nome',
-            'rules' => 'required|trim|is_unique[servicos.nome]',
+            'rules' => 'required|trim|is_unique[services.name_service]',
             'errors' => [
                 'is_unique' => "O %s já existe."
             ],
         ],
         [
-            'field' => 'descricao',
+            'field' => 'description',
             'label' => '',
             'rules' => 'trim',
         ],
         [
-            'field' => 'preco',
-            'label' => '',
+            'field' => 'unit_price',
+            'label' => 'Preço',
             'rules' => 'required|trim',
         ]
     ],

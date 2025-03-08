@@ -108,12 +108,12 @@
                     <div class="row align-items-center">
                         <div class="col-7">
                             <i class="mdi mdi-oil font-24 text-dark"></i>
-                            <a href="<?php echo base_url(); ?>index.php/servicos/adicionar">
+                            <a href="<?php echo base_url(); ?>index.php/services/addService">
                                 <p class="font-16 m-b-5 text-secondary" data-toggle="tooltip" data-placement="top" title="Adicionar Serviços">Serviços</p>
                             </a>
                         </div>
                         <div class="col-5">
-                            <h1 class="font-light text-right mb-0"><?= $this->db->count_all('servicos'); ?></h1>
+                            <h1 class="font-light text-right mb-0"><?= $this->db->count_all('services'); ?></h1>
                         </div>
                     </div>
                 </div>

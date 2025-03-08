@@ -1,14 +1,14 @@
 <?php if (!defined('BASEPATH')) { exit('No direct script access allowed'); }
 
-class Servicos extends MY_Controller
+class Services extends MY_Controller
 {
     public function __construct()
     {
         parent::__construct();
 
         $this->load->helper('form');
-        $this->load->model('servicos_model');
-        $this->data['menuServicos'] = 'Serviços';
+        $this->load->model('services_model');
+        $this->data['menuServices'] = 'Serviços';
     }
 
     public function index()
@@ -24,18 +24,18 @@ class Servicos extends MY_Controller
         }
         $this->load->library('pagination');
 
-        $this->data['configuration']['base_url'] = site_url('servicos/home/');
-        $this->data['configuration']['total_rows'] = $this->servicos_model->count('servicos');
+        $this->data['configuration']['base_url'] = site_url('services/home/');
+        $this->data['configuration']['total_rows'] = $this->services_model->count('services');
 
         $this->pagination->initialize($this->data['configuration']);
 
-        $this->data['results'] = $this->servicos_model->get('servicos', '*', '', $this->data['configuration']['per_page'], $this->uri->segment(3));
+        $this->data['results'] = $this->services_model->get('services', '*', '', $this->data['configuration']['per_page'], $this->uri->segment(3));
 
-        $this->data['view'] = 'servicos/servicos';
+        $this->data['view'] = 'services/services';
         return $this->layout();
     }
 
-    public function adicionar()
+    public function addService()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'aServico')) {
             $this->session->set_flashdata('error', 'Você não tem permissão para adicionar serviços.');
@@ -45,31 +45,31 @@ class Servicos extends MY_Controller
         $this->load->library('form_validation');
         $this->data['custom_error'] = '';
 
-        if ($this->form_validation->run('servicos') == false) {
+        if ($this->form_validation->run('services') == false) {
             $this->data['custom_error'] = (validation_errors() ? '<div class="form_error">' . validation_errors() . '</div>' : false);
         } else {
-            $preco = $this->input->post('preco');
-            $preco = str_replace(",", "", $preco);
+            $price = $this->input->post('unit_price');
+            $price = str_replace(",", "", $price);
 
             $data = [
-                'nome' => set_value('nome'),
-                'descricao' => set_value('descricao'),
-                'preco' => $preco,
+                'name_service' => set_value('name_service'),
+                'description'  => set_value('description'),
+                'unit_price'   => $price,
             ];
 
-            if ($this->servicos_model->add('servicos', $data) == true) {
+            if ($this->services_model->add('services', $data) == true) {
                 $this->session->set_flashdata('success', 'Serviço adicionado com sucesso!');
                 log_info('Adicionou um serviço');
-                redirect(site_url('servicos/adicionar/'));
+                redirect(site_url('services/addService/'));
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ocorreu um erro.</p></div>';
             }
         }
-        $this->data['view'] = 'servicos/adicionarServico';
+        $this->data['view'] = 'services/addService';
         return $this->layout();
     }
 
-    public function editar()
+    public function editService()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'eServico')) {
             $this->session->set_flashdata('error', 'Você não tem permissão para editar serviços.');
@@ -77,32 +77,48 @@ class Servicos extends MY_Controller
         }
         $this->load->library('form_validation');
         $this->data['custom_error'] = '';
+        $this->form_validation->set_rules('name_service', 'Nome do Serviço', 'trim|required');
+        $this->form_validation->set_rules('unit_price', 'Código de Barra', 'trim|required');
 
-        if ($this->form_validation->run('servicos') == false) {
+        if ($this->form_validation->run() == false) {
             $this->data['custom_error'] = (validation_errors() ? '<div class="form_error">' . validation_errors() . '</div>' : false);
         } else {
-            $preco = $this->input->post('preco');
-            $preco = str_replace(",", "", $preco);
+            $price = $this->input->post('unit_price');
+            $price = str_replace(",", "", $price);
             $data = [
-                'nome' => $this->input->post('nome'),
-                'descricao' => $this->input->post('descricao'),
-                'preco' => $preco,
+                'name_service' => $this->input->post('name_service'),
+                'description'  => $this->input->post('description'),
+                'unit_price'   => $price,
+                'updated_at'  => date('Y-m-d'),
             ];
 
-            if ($this->servicos_model->edit('servicos', $data, 'idServicos', $this->input->post('idServicos')) == true) {
+            if ($this->services_model->edit('services', $data, 'idService', $this->input->post('idService')) == true) {
                 $this->session->set_flashdata('success', 'Serviço editado com sucesso!');
-                log_info('Alterou um serviço. ID: ' . $this->input->post('idServicos'));
-                redirect(site_url('servicos/editar/') . $this->input->post('idServicos'));
+                log_info('Alterou um serviço. ID: ' . $this->input->post('idService'));
+                redirect(site_url('services/editService/') . $this->input->post('idService'));
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ocorreu um errro.</p></div>';
             }
         }
 
-        $this->data['result'] = $this->servicos_model->getById($this->uri->segment(3));
+        $this->data['result'] = $this->services_model->getById($this->uri->segment(3));
 
-        $this->data['view'] = 'servicos/editarServico';
+        $this->data['view'] = 'services/editService';
         return $this->layout();
     }
 
+    public function viewService()
+    {
+        echo "Hello service.";
+
+        $this->data['view'] = 'services/viewService';
+        return $this->layout();
+    }
+
+    public function removeService()
+    {
+        echo "Hello service.";
+
+    }
 
 }

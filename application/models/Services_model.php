@@ -1,5 +1,5 @@
 <?php
-class Servicos_model extends CI_Model
+class Services_model extends CI_Model
 {
 
     public function __construct()
@@ -11,7 +11,7 @@ class Servicos_model extends CI_Model
     {
         $this->db->select($fields);
         $this->db->from($table);
-        $this->db->order_by('idServicos', 'desc');
+        $this->db->order_by('idService', 'desc');
         $this->db->limit($perpage, $start);
         if ($where) {
             $this->db->where($where);
@@ -25,9 +25,9 @@ class Servicos_model extends CI_Model
 
     public function getById($id)
     {
-        $this->db->where('idServicos', $id);
+        $this->db->where('idService', $id);
         $this->db->limit(1);
-        return $this->db->get('servicos')->row();
+        return $this->db->get('services')->row();
     }
     
     public function add($table, $data)

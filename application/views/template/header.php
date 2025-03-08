@@ -44,13 +44,13 @@
       location.href = '<?= site_url('viaturas'); ?>';
     });
     shortcut.add("F4", function() {
-      location.href = '<?= site_url('servicos'); ?>';
+      location.href = '<?= site_url('services'); ?>';
     });    
     shortcut.add("F5", function() {
-      location.href = '<?= site_url('cotacoes'); ?>';
+      location.href = '<?= site_url('quotations'); ?>';
     });
     shortcut.add("F6", function() {
-      location.href = '<?= site_url('compras'); ?>';
+      location.href = '<?= site_url('purchase'); ?>';
     });
     shortcut.add("F7", function() {
       location.href = '<?= site_url('jobCards'); ?>';
@@ -59,7 +59,7 @@
       location.href = '<?= site_url('contratos'); ?>';
     });    
     shortcut.add("F9", function() {
-      location.href = '<?= site_url('vendas'); ?>';
+      location.href = '<?= site_url('sales'); ?>';
     });   
     shortcut.add("F10", function() {
       location.href = '<?= site_url('financeiro'); ?>';
@@ -77,19 +77,19 @@
       location.href = '<?= site_url('contacts/addContact'); ?>';
     });
     shortcut.add("2", function() {
-      location.href = '<?= site_url('products/adicionar'); ?>';
+      location.href = '<?= site_url('products/addContact'); ?>';
     });
     shortcut.add("3", function() {
       location.href = '<?= site_url('viaturas/adicionar'); ?>';
     });
     shortcut.add("4", function() {
-      location.href = '<?= site_url('servicos/adicionar'); ?>';
+      location.href = '<?= site_url('services/addServices'); ?>';
     });  
     shortcut.add("5", function() {
-      location.href = '<?= site_url('cotacoes/adicionar'); ?>';
+      location.href = '<?= site_url('quotations/addQuotation'); ?>';
     }); 
     shortcut.add("6", function() {
-      location.href = '<?= site_url('compras/adicionar'); ?>';
+      location.href = '<?= site_url('purchases/adicionar'); ?>';
     });
     shortcut.add("7", function() {
       location.href = '<?= site_url('jobCards/adicionar'); ?>';
@@ -287,7 +287,7 @@
                                             <?php } ?>
 
                                             <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rServico')) { ?>
-                                                <a class="dropdown-item pl-2 pt-1 pb-1" href="<?= site_url('relatorios/servicos') ?>">Serviços</a>
+                                                <a class="dropdown-item pl-2 pt-1 pb-1" href="<?= site_url('relatorios/services') ?>">Serviços</a>
                                             <?php } ?>
 
                                             <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rViatura')) { ?>
